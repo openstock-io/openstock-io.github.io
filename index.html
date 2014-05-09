@@ -19,9 +19,8 @@
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	</head>
 
-<body>
 
-
+<body data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
 
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -40,6 +39,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+		<li style="display: none;"><a href="#openstock">Openstock</a></li>
 		<li><a href="#how-it-works">How it works</a></li>
 		<li><a href="#support-us">Support us</a></li>
 		<li><a href="#contact">Contact</a></li>
@@ -52,9 +52,8 @@
 
 	<div class="container">
 
-
 	  <!-- Jumbotron -->
-	  <div class="jumbotron">
+	  <div id="openstock" class="jumbotron">
 		<img class="img-responsive center-block" src="img/openstock_logo.png">
 		<p class="lead">En webbtjänst för att bedöma hur hållbar en investering i börsnoterade bolag är. En tjänst som kan vara ett stöd i helhetsbedömningen av ett bolag. Genom att sätta en siffra på hållbarheten ges användaren större möjlighet att göra bra beslut då pengar är makt och placeringen av dem är ett utövande av denna makt.. Beyond Sustainable.</p>
 
@@ -65,59 +64,51 @@
 		<div class="col-md-4">
 		  <h2>Openstock Index</h2>
 		  <p>The Openstock Index has Massive Impact on the way decisions are made. For a publicly traded asset, a low Index makes "buy" less attractive - bringing a lower stock market price. This is fair and healthy competition - if company A aims at a higher Index than some of it's competitors, it's better start doing something about it. Sustainable decisions will be taken.</p>
-		  <p><a class="btn btn-primary" href="#how-it-works" role="button">View details &raquo;</a></p>
 		</div>
 		<div class="col-md-4">
 		  <h2>Public API</h2>
 		  <p>API is tech talk, which means it's very easy to integrate Openstock services to any other web service.</p>
-		  <p><a class="btn btn-primary" href="#public-api" role="button">View details &raquo;</a></p>
 	   </div>
 		<div class="col-md-4">
 		  <h2>Super credible</h2>
 		  <p>We would even say it's super duper credible. Obviously this is what it boils down to, behind Openstock is credible people who are specialists in their field. We are not affiliated or financed with anything or anyone who gains from bull- or bear stock prices. You can read about <a href="http://blog.jord.io/openstock.io">the methods behind our valuation</a>.</p>
-		  <p><a class="btn btn-primary" href="#how-it-works" role="button">View details &raquo;</a></p>
 		</div>
 	  </div>
 
 
 
-	  <!-- Jumbotron -->
-	  <div id="support-us" class="jumbotron">
-		<h1>Support us</h1>
-		<p class="lead">Are you are a bad ass <strong>developer</strong> and would like to contribute, please <a href="#contact">let us know</a>. If you would rather give us some of your <strong>money</strong> we would be delighted - it's easy and so helpful. You can use <a href="https://flattr.com/submit/auto?user_id=jord&url=http%3A%2F%2Fopenstock.io" target="_blank">Flattr</a>, <a href="https://www.kickstarter.com/projects/1641810671/313828377?token=055bfb67" target="_blank">Kickstarter</a> or <a href="http://www.paypal.com" target="_blank">Paypal</a>.</p>
-	  </div>
+		  <!-- Jumbotron -->
+		  <div id="how-it-works" class="jumbotron">
+			<h1>How it works</h1>
+			<p class="lead">Transparency is key. When we value an asset, this is done in ten fields. Each field is analysed by an expert group with vast knowledge within that field. <a href="http://blog.jord.io/openstock.io">Read more</a></p>
+		  </div>
+
+
+
+		  <!-- Jumbotron -->
+		  <div id="support-us" class="jumbotron">
+			<h1>Support us</h1>
+			<p class="lead">Are you are a bad ass <strong>developer</strong> and would like to contribute, please <a href="#contact">let us know</a>. If you would rather give us some of your <strong>money</strong> we would be delighted - it's easy and so helpful. You can use <a href="https://flattr.com/submit/auto?user_id=jord&url=http%3A%2F%2Fopenstock.io" target="_blank">Flattr</a>, <a href="https://www.kickstarter.com/projects/1641810671/313828377?token=055bfb67" target="_blank">Kickstarter</a> or <a href="http://www.paypal.com" target="_blank">Paypal</a>.</p>
+		  </div>
+
+
+		  <!-- Jumbotron -->
+		  <div id="public-api" class="jumbotron">
+			<h1>Public API</h1>
+			<p class="lead">Transparency is key here too. Openstock is Open source, which means you can read, modify and contribute. Our API is <a href="https://github.com/openstock-io/openstock-api">documented here</a>.</p>
+		  </div>
 
 
 
 
-
-	  <!-- Jumbotron -->
-	  <div id="how-it-works" class="jumbotron">
-		<h1>How it works</h1>
-		<p class="lead">Transparency is key. When we value an asset, this is done in ten fields. Each field is analysed by an expert group with vast knowledge within that field. <a href="http://blog.jord.io/openstock.io">Read more</a></p>
-	  </div>
+		  <!-- Jumbotron -->
+		  <div id="contact" class="jumbotron">
+			<h1>Contact</h1>
+			<p class="lead"><a href="mailto:hello@openstock.io">Email</a> &middot; <a href="https://github.com/openstock-io" target="_blank">Github</a> &middot; <a href="http://blog.jord.io/openstock.io" target="_blank">Scriptogr.am</a> &middot; <a href="https://twitter.com/openstock_io" target="_blank">@openstock_io</a></p>
 
 
-
-
-	  <!-- Jumbotron -->
-	  <div id="public-api" class="jumbotron">
-		<h1>Public API</h1>
-		<p class="lead">Transparency is key here too. Openstock is Open source, which means you can read, modify and contribute. Our API is <a href="https://github.com/openstock-io/openstock-api">documented here</a>.</p>
-	  </div>
-
-
-
-
-	  <!-- Jumbotron -->
-	  <div id="contact" class="jumbotron">
-		<h1>Contact</h1>
-		<p class="lead"><a href="mailto:hello@openstock.io">Email</a> &middot; <a href="https://github.com/openstock-io" target="_blank">Github</a> &middot; <a href="http://blog.jord.io/openstock.io" target="_blank">Scriptogr.am</a> &middot; <a href="https://twitter.com/openstock_io" target="_blank">@openstock_io</a></p>
-
-
-		<p>We are always looking for people that puts the visionary agenda first.</p>
-	  </div>
-
+			<p>We are always looking for people that puts the visionary agenda first.</p>
+		  </div>
 
 
 
