@@ -16,9 +16,17 @@
 	-webkit-font-smoothing: antialiased;
 }
 
-body{
-	font-family: 'proxima_nova_regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+body, form, label, input, button{
+	font-family: 'proxima_nova_regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: normal;
+    font-style: normal;
 	-webkit-font-smoothing: antialiased;
+}
+
+
+input{
+	border: none;
+	border-bottom: 1px dashed #222;
 }
 
 a{

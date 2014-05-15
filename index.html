@@ -89,7 +89,7 @@
 		  <!-- Jumbotron -->
 		  <div id="support-us" class="jumbotron">
 			<h1>Support us</h1>
-			<p class="lead">Are you are a bad ass <strong>developer</strong> and would like to contribute, please <a href="#contact">let us know</a>. If you would rather give us some of your <strong>money</strong> we would be delighted - it's easy and so helpful. You can use <a href="https://flattr.com/submit/auto?user_id=jord&url=http%3A%2F%2Fopenstock.io" target="_blank">Flattr</a>, <a href="https://www.kickstarter.com/projects/1641810671/313828377?token=055bfb67" target="_blank">Kickstarter</a> or <a href="http://www.paypal.com" target="_blank">Paypal</a>.</p>
+			<p class="lead">Are you are a bad ass developer and would like to contribute, please <a href="#contact">let us know</a>. If you would rather give us some of your money we would be delighted - it's easy and so helpful. You can use <a href="https://flattr.com/submit/auto?user_id=jord&url=http%3A%2F%2Fopenstock.io" target="_blank">Flattr</a>, <a href="https://www.kickstarter.com/projects/1641810671/313828377?token=055bfb67" target="_blank">Kickstarter</a> or <a href="http://www.paypal.com" target="_blank">Paypal</a>.</p>
 		  </div>
 
 
@@ -100,7 +100,21 @@
 			<p class="lead"><a href="https://github.com/openstock-io" target="_blank">Github</a> &middot; <a href="https://twitter.com/openstock_io" target="_blank">@openstock_io</a> &middot; <a href="http://blog.jord.io/openstock.io" target="_blank">Scriptogr.am</a></p>
 
 
-			<p>We are always looking for people with a visionary agenda.</p>
+			<p>We are always looking for people who puts the visionary agenda first.</p>
+
+			<label for="email"><h2>Newsletter</h2></label>
+			<p>
+				<form class="form" role="form" onsubmit="return false">
+					<div id="email-container" class="form-group">
+						<input type="email" id="email" name="email" placeholder="E-mail">
+					</div>
+
+					<div class="form-group">
+						<button class="btn btn-success" data-progress="Signing up ..." data-success="Signed up, thanks <span class='glyphicon glyphicon-ok'></<span>" data-error="Could not sign up :(" href="#" id="signup-btn">Signup</button>
+					</div>
+				</form>
+			</p>
+
 		  </div>
 
 
@@ -126,7 +140,30 @@
 
   <script>
   	$(document).ready(function(){
+  		$('#signup-btn').on('click', function(e){
 
+  			var btn = $('#signup-btn');
+			btn.attr('disabled', 'disabled');
+			btn.html(btn.attr('data-progress'));
+			btn.removeClass('btn-success');
+
+			$('#email-container').hide();
+
+			jQuery.ajax({
+				url:"http://openstock-signup.herokuapp.com/save/email/hello@openstock.io",
+				dataType:"json",
+
+				success:function(result){
+		  			var btn = $('#signup-btn');
+					btn.html(btn.attr('data-success'));
+				},
+
+				error:function(){
+		  			var btn = $('#signup-btn');
+					btn.html(btn.attr('data-error'));
+				}
+			});
+  		});
   	});
   </script>
 
