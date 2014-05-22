@@ -14,9 +14,6 @@
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="css/bootstrap/justified-nav.css">
 		<link rel="stylesheet" href="css/style.css">
-
-		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	</head>
 
 
@@ -97,12 +94,11 @@
 		  <!-- Jumbotron -->
 		  <div id="contact" class="jumbotron">
 			<h1>Contact</h1>
-			<p class="lead"><a href="https://github.com/openstock-io" target="_blank">Github</a> &middot; <a href="https://twitter.com/openstock_io" target="_blank">@openstock_io</a> &middot; <a href="http://blog.jord.io/openstock.io" target="_blank">Scriptogr.am</a></p>
+			<p class="lead"><a href="https://twitter.com/openstock_io" target="_blank">Twitter</a> &middot; <a href="https://github.com/openstock-io" target="_blank">Github</a> &middot; <a href="http://blog.jord.io/openstock.io" target="_blank">Scriptogram</a> &middot; <a href="mailto:hello@openstock.io">Email</a></p>
 
 
-			<p>We are always looking for people who puts the visionary agenda first.</p>
+			<p>We are always looking for people who puts the visionary agenda first. You can also <label for="email">sign up for our newsletter:</label></p>
 
-			<label for="email"><h2>Newsletter</h2></label>
 			<p>
 				<form class="form" role="form" onsubmit="return false">
 					<div id="email-container" class="form-group">
@@ -110,7 +106,7 @@
 					</div>
 
 					<div class="form-group">
-						<button class="btn btn-success" data-progress="Signing up ..." data-success="Signed up, thanks <span class='glyphicon glyphicon-ok'></<span>" data-error="Could not sign up :(" href="#" id="signup-btn">Signup</button>
+						<button class="btn btn-success" data-progress="Signing up ..." data-success="Signed up, thanks <span class='glyphicon glyphicon-ok'></<span>" data-error="Check your email and try again" href="#" id="signup-btn">Signup</button>
 					</div>
 				</form>
 			</p>
@@ -131,6 +127,8 @@
 
 	  <!-- Site footer -->
 	  <div class="footer">
+		<p class="pull-right"><a href="https://twitter.com/openstock_io" target="_blank">Twitter</a> &middot; <a href="https://github.com/openstock-io" target="_blank">Github</a> &middot; <a href="http://blog.jord.io/openstock.io" target="_blank">Scriptogram</a> &middot; <a href="mailto:hello@openstock.io">Email</a></p>
+
 		<p>&copy; Openstock 2014.</p>
 	  </div>
 
@@ -138,45 +136,49 @@
 
   </body>
 
-  <script>
-  	$(document).ready(function(){
-  		$('#signup-btn').on('click', function(e){
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="js/alert.js"></script>
 
-  			var btn = $('#signup-btn');
-			btn.attr('disabled', 'disabled');
-			btn.html(btn.attr('data-progress'));
-			btn.removeClass('btn-success');
+	<script>
+		$(document).ready(function(){
+			$('#signup-btn').on('click', function(e){
+				var btn = $('#signup-btn');
+				btn.attr('disabled', 'disabled');
+				btn.html(btn.attr('data-progress'));
+				btn.removeClass('btn-success');
 
-			$('#email-container').hide();
+				jQuery.ajax({
+					url:"http://signup.openstock.io/save/email/" + $('#email').val(),
+					dataType:"json",
 
-			jQuery.ajax({
-				url:"http://openstock-signup.herokuapp.com/save/email/hello@openstock.io",
-				dataType:"json",
+					success:function(result){
+						$('#email-container').hide();
+			  			var btn = $('#signup-btn');
+						btn.html("Signed up, thanks <span class='glyphicon glyphicon-ok'></<span>");
+						a.success("Signed up, thanks <span class='glyphicon glyphicon-ok'></<span>");
+					},
 
-				success:function(result){
-		  			var btn = $('#signup-btn');
-					btn.html(btn.attr('data-success'));
-				},
-
-				error:function(){
-		  			var btn = $('#signup-btn');
-					btn.html(btn.attr('data-error'));
-				}
+					error:function(){
+			  			var btn = $('#signup-btn');
+						btn.removeAttr('disabled');
+						btn.html(btn.attr('data-error'));
+						a.fail('Check your email and try again');
+					}
+				});
 			});
-  		});
-  	});
-  </script>
+		});
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	</script>
 
-  ga('create', 'UA-50812885-1', 'openstock.io');
-  ga('send', 'pageview');
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-</script>
-  
+		ga('create', 'UA-50812885-1', 'openstock.io');
+		ga('send', 'pageview');
+	</script>
 
 </html>

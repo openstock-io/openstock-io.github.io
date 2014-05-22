@@ -24,9 +24,13 @@ body, form, label, input, button{
 }
 
 
+.alert{
+	border-radius: 0 !important;
+}
+
 input{
 	border: none;
-	border-bottom: 1px dashed #222;
+	border-bottom: 1px solid #F65832;
 }
 
 a{
@@ -41,13 +45,12 @@ a:hover{
 	border-bottom: 1px solid #F65832;
 }
 
-
-::selection {
+::-moz-selection {
     background: #F65832;
     color: #fff;
 }
 
-::-moz-selection {
+::selection {
     background: #F65832;
     color: #fff;
 }
@@ -71,7 +74,13 @@ a:hover{
 }
 
 .navbar-default .navbar-nav a:hover, .navbar-default .navbar-nav .active a{
-	border-bottom: 2px solid #F65832;
 	background: none !important;
 	box-shadow: none !important;
+}
+
+.navbar-default .navbar-nav a:hover{
+}
+
+.navbar-default .navbar-nav .active a{
+	border-bottom: 2px solid #F65832;
 }
