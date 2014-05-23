@@ -70,7 +70,7 @@ a:hover{
 }
 
 .navbar-default .navbar-nav a{
-	transition: color 0.5s ease, border-color 0.5s ease;
+	transition: color 0.5s ease, border-color 0.5s ease, background-color 0.5s ease;
 }
 
 .navbar-default .navbar-nav a:hover, .navbar-default .navbar-nav .active a{
@@ -79,8 +79,9 @@ a:hover{
 }
 
 .navbar-default .navbar-nav a:hover{
+	background-color: #EEE !important;
 }
 
 .navbar-default .navbar-nav .active a{
-	border-bottom: 2px solid #F65832;
+	background-color: #EEE !important;
 }
