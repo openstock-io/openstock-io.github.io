@@ -3,7 +3,7 @@ var Alert = function(){
 	this.box = null;
 	this.msg = null;
 
-	this.alert = '<div style="display: none;" id="alert-box" class="alert navbar-fixed-top fade in"><p id="alert-box-message"></p></div>';
+	this.alert = '<div style="display: none;" id="alert-box" class="alert alert-success fade in"><p id="alert-box-message"></p></div>';
 }
 
 Alert.prototype.success = function(msg){
@@ -45,12 +45,15 @@ Alert.prototype.update = function(msg, state){
 
 	this.box.removeClass('alert-danger').removeClass('alert-warning').removeClass('alert-success');
 
+	/*
 
 	if (state == 'success') {
 		this.box.addClass('alert-success');
 	} else if (state == 'fail') {
 		this.box.addClass('alert-danger');
 	}
+
+	*/
 
 	this.timer = window.setTimeout(function(t){
 		t.box.alert('close');

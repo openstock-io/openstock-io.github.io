@@ -18,11 +18,7 @@ h2{
 
 body{
 	color: #FFF;
-	background-image: linear-gradient(45deg,#F65832 0,#F65832 100%);
-}
-
-.alert{
-	border-radius: 0 !important;
+	background-image: linear-gradient(-60deg,#FF9872 0,#F65832 65%);
 }
 
 input{
@@ -30,7 +26,11 @@ input{
 	border: none;
 	color: #FFF !important;
 	background-color: transparent;
-	border-bottom: 1px solid #FFF;
+	border-bottom: 1px dashed #FFF;
+}
+
+input:focus{
+	outline-width: 0px;	
 }
 
 ::input-placeholder{
@@ -105,7 +105,7 @@ a:hover{
 }
 
 .nav a{
-    font-weight: 400;
+    font-weight: 300;
 	color: #F65832 !important;
 }
 
@@ -129,7 +129,27 @@ a:hover{
 }
 
 
+.lead{
+	margin-top: 3em;
+	font-size: 41px !important;
+}
 
+
+
+.alert{
+	border-radius: 0 !important;
+	font-size: 21px;
+	background-color: #FFF;
+	color: #F65832;
+}
+
+
+#alert-box{
+	opacity: .8;
+	position: fixed;
+	top: 10%;
+	right: 0;
+}
 
 
 
