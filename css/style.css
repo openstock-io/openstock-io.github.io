@@ -92,6 +92,7 @@ a:hover{
 
 
 
+
 .navbar-brand{
 	color: #F65832 !important;
 }
@@ -99,14 +100,17 @@ a:hover{
 .navbar-default .navbar-toggle{
 	border-radius: 0 !important;
 	border: 0 !important;
+	color: #FFF;
 }
 
-.navbar-default .navbar-toggle{
-	color: #F65832;
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+	background-color: none !important;	
 }
 
 .navbar{
+	opacity: 0.8;
 	border-bottom: none !important;	
+	background-color: #FFF !important;
 }
 
 .nav a{
@@ -134,8 +138,27 @@ a:hover{
 }
 
 
+
+.navbar-top-style{
+	opacity: 1;
+	border-bottom: 1px solid #FFF !important;	
+	background-color: transparent !important;	
+	color: #FFF !important;
+}
+
+.navbar-top-style .nav a{
+	color: #FFF !important;
+}
+
+.navbar-top-style .navbar-brand{
+	color: #FFF !important;
+}
+
+
+
+
 .lead{
-	margin-top: 3em;
+	margin-top: 1.2em;
 	font-size: 41px !important;
 }
 
