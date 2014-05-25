@@ -17,7 +17,7 @@
 <body data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
 
 
-<nav class="navbar navbar-default navbar-fixed-top navbar-top-style" role="navigation">
+<nav id="navigation" class="navbar navbar-default navbar-fixed-top navbar-top-style" role="navigation">
   <div class="container-fluid">
 
     <div class="navbar-header">
@@ -171,6 +171,24 @@
 					}
 				});
 			});
+
+			$(document).on('scroll', function(e){
+				if ($(this).scrollTop() > 100) {
+					console.log('> 100');
+					if ($('#navigation').hasClass('navbar-top-style')) {
+						$('#navigation').removeClass('navbar-top-style');
+					}
+				}
+
+				else {
+					console.log('< 100');
+					if (!$('#navigation').hasClass('navbar-top-style')) {
+						$('#navigation').addClass('navbar-top-style');
+					}
+				}
+
+			});
+
 		});
 
 	</script>

@@ -107,7 +107,10 @@ a:hover{
 	background-color: none !important;	
 }
 
+
+
 .navbar{
+	transition: color 1s ease, background-color 1s ease;
 	opacity: 0.8;
 	border-bottom: none !important;	
 	background-color: #FFF !important;
@@ -139,8 +142,9 @@ a:hover{
 
 
 
+
+
 .navbar-top-style{
-	opacity: 1;
 	border-bottom: 1px solid #FFF !important;	
 	background-color: transparent !important;	
 	color: #FFF !important;
@@ -153,6 +157,8 @@ a:hover{
 .navbar-top-style .navbar-brand{
 	color: #FFF !important;
 }
+
+
 
 
 
