@@ -108,6 +108,12 @@ a:hover{
 }
 
 
+.navbar-default .navbar-toggle .icon-bar{
+	transition: background-color 1s ease;
+	background-color: #F65832 !important;
+}
+
+
 
 .navbar{
 	transition: color 1s ease, background-color 1s ease;
@@ -156,6 +162,10 @@ a:hover{
 
 .navbar-top-style .navbar-brand{
 	color: #FFF !important;
+}
+
+.navbar-top-style .navbar-toggle .icon-bar{
+	background-color: #FFF !important;
 }
 
 
