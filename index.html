@@ -173,15 +173,13 @@
 			});
 
 			$(document).on('scroll', function(e){
-				if ($(this).scrollTop() > 100) {
-					console.log('> 100');
+				if ($(this).scrollTop() > 70) {
 					if ($('#navigation').hasClass('navbar-top-style')) {
 						$('#navigation').removeClass('navbar-top-style');
 					}
 				}
 
 				else {
-					console.log('< 100');
 					if (!$('#navigation').hasClass('navbar-top-style')) {
 						$('#navigation').addClass('navbar-top-style');
 					}
