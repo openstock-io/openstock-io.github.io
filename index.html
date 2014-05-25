@@ -48,7 +48,7 @@
 
 	  <!-- Jumbotron -->
 	  <div id="openstock" class="jumbotron">
-		<p class="lead">The power of investments as a leverage for a sustainable movement.</p>
+		<p class="lead">The power of investments as leverage for sustainable momentum.</p>
 
 	  </div>
 
@@ -95,16 +95,16 @@
 			<p><a href="https://twitter.com/openstock_io" target="_blank">Twitter</a> &middot; <a href="https://github.com/openstock-io" target="_blank">Github</a> &middot; <a href="http://blog.jord.io/openstock.io" target="_blank">Scriptogram</a> &middot; <a href="mailto:hello@openstock.io">Email</a></p>
 
 
-			<p>We are always looking for people who puts the visionary agenda first. You can also <label for="email">sign up for our newsletter:</label></p>
+			<p>We are always looking for people who puts the visionary agenda first.</p>
 
 			<p>
 				<form class="form" role="form" onsubmit="return false">
 					<div id="email-container" class="form-group">
-						<input type="email" id="email" name="email" placeholder="Email">
+						<p><label for="email">Sign up for our newsletter:</label></p><input type="email" id="email" name="email" placeholder="Email">
 					</div>
 
 					<div class="form-group">
-						<button class="btn btn-success" data-progress="Signing up ..." data-success="Signed up, thanks <span class='glyphicon glyphicon-ok'></<span>" data-error="Check your email and try again" href="#" id="signup-btn">Signup</button>
+						<button class="btn btn-success" data-progress="Signing up ..." data-success="Signed up, thanks <span class='glyphicon glyphicon-ok'></<span>" data-error="Check email and retry" href="#" id="signup-btn">Sign up</button>
 					</div>
 				</form>
 			</p>
@@ -186,6 +186,14 @@
 						$('#navigation').addClass('navbar-top-style');
 					}
 				}
+
+			});
+
+			$('#bs-example-navbar-collapse-1').on('click', function(e){
+
+				setTimeout(function(e){
+					$('#bs-example-navbar-collapse-1').collapse('hide');
+				}, 500);
 
 			});
 
